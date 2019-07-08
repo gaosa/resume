@@ -90,14 +90,14 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Carnegie Mellon University}{Pittsburgh, PA}
-      {Master of Computational Data Science;  GPA: 3.94}{Aug 2018 -- Dec 2019}
+      {Master of Computational Data Science, {\normalfont School of Computer Science;  GPA: 4.00}}{Aug 2018 -- Dec 2019}
     \resumeItemListStart
-      \resumeItem{Selected Coursework}
+      \resumeItem{\normalfont Selected Coursework}
         {Cloud Computing, Distributed Systems, Storage Systems, Search Engines, Machine Learning}
     \resumeItemListEnd
     \resumeSubheading
       {Peking University}{Beijing, China}
-      {Bachelor of Science in Computer Science and Technology;  GPA: 3.64}{Sept 2014 -- July 2018}
+      {Bachelor of Science in Computer Science and Technology, {\normalfont School of EECS;  GPA: 3.64}}{Sept 2014 -- July 2018}
   \resumeSubHeadingListEnd
 
 
@@ -108,6 +108,17 @@
     \resumeSubheading
       {LinkedIn}{Sunnyvale, CA}
       {Software Engineer Intern}{May 2019 -- Aug 2019}
+      \resumeItemListStart
+        \resumeItemCustom{
+          Improved Groups product and enabled group admins to separate group privacy and membership settings. Implemented new logic in voyager api and multiproducts using Java, and added configurations to settings database
+        }
+        \resumeItemCustom{
+          Wrote a design document for my project, and held several meetings with people from different teams to discuss it
+        }
+        \resumeItemCustom{
+          Resolved several bugs in Groups product by making changes in multipoducts using Java 
+        }
+      \resumeItemListEnd
 
     \resumeSubheading
       {Carnegie Mellon University}{Pittsburgh, PA}
@@ -132,16 +143,16 @@
       {Software Engineer Intern}{Summer 2017 and 2018}
       \resumeItemListStart
         \resumeItemCustom{
-          Developed the frontend of a K-12 education website with React,
-          and a single-page application for teaching traditional Chinese medicine
-          with Vue.js
+          Developed several websites: a K-12 education website with React,
+          a single-page application for teaching traditional Chinese medicine with Vue.js,
+          and a Django website for generating Q\&A pairs for Bing's instant answers
         }
         \resumeItemCustom{
           Implemented backend APIs for file transmission with Swagger Tools and 
-          Go, and ASP.NET website APIs for job submission with C\#
+          Go, and ASP.NET website APIs for AEther job submission with C\#
         }
         \resumeItemCustom{
-          Built a website with Django, to generate high-quality Q\&A pairs for question
+          Generated high-quality Q\&A pairs for question
           answering by utilizing machine learning and XPath
         }
         \resumeItemCustom{
@@ -172,8 +183,9 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{QuantSoftware Toolkit}
-      {Open source python library for financial data analysis and machine learning for finance.}
+    \resumeSubItem{QryEval}
+      {Search engine for structured queries written in Java. It supports ranking algorithms like
+        Unranked/Ranked Boolean, Indri, and BM25. It uses pseudo relevance feedback, learning to rank, and diversification to improve the result}
     \resumeSubItem{Github Visualization}
       {Data Visualization of Git Log data using D3 to analyze project trends over time.}
     \resumeSubItem{Recommendation System}
