@@ -44,26 +44,26 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
-  \item\small{
+  \item[]\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
   }
 }
 
 \newcommand{\resumeItemCustom}[1]{
-  \item\small{
+  \item[$\bullet$]\small{
     #1 \vspace{-2pt}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{-1pt}\item[]
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{\small#1} & {\small#2} \\
+      \textit{\small#3} & \textit{\small#4} \\
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{\small#1}{\small#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -90,14 +90,18 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Carnegie Mellon University}{Pittsburgh, PA}
-      {Master of Computational Data Science, {\normalfont School of Computer Science;  GPA: 4.00}}{Aug 2018 -- Dec 2019}
+      {Master of Computational Data Science, {\normalfont School of Computer Science;  GPA: 4.00/4.00}}{Aug 2018 -- Dec 2019}
     \resumeItemListStart
-      \resumeItem{\normalfont Selected Coursework}
-        {Cloud Computing, Distributed Systems, Storage Systems, Search Engines, Machine Learning}
+      \resumeItemCustom{
+        Selected Coursework: 
+        Cloud Computing, Distributed Systems, Storage Systems, Search Engines, Machine Learning
+      }
+    %   \resumeItem{\normalfont Selected Coursework}
+    %     {Cloud Computing, Distributed Systems, Storage Systems, Search Engines, Machine Learning}
     \resumeItemListEnd
     \resumeSubheading
       {Peking University}{Beijing, China}
-      {Bachelor of Science in Computer Science and Technology, {\normalfont School of EECS;  GPA: 3.64}}{Sept 2014 -- July 2018}
+      {Bachelor of Science in Computer Science and Technology, {\normalfont School of EECS;  GPA: 3.64/4.00}}{Sep 2014 -- Jul 2018}
   \resumeSubHeadingListEnd
 
 
@@ -110,13 +114,13 @@
       {Software Engineer Intern}{May 2019 -- Aug 2019}
       \resumeItemListStart
         \resumeItemCustom{
-          Improved \href{https://blog.linkedin.com/2018/september/10/unveiling-a-new-linkedin-groups-experience-a-shared-space-to-build-community}{Groups product} and enabled group admins to separate group privacy and membership settings. Implemented new logic in voyager api and multiproducts using Java, and added configurations to settings database
+          Improved \href{https://blog.linkedin.com/2018/september/10/unveiling-a-new-linkedin-groups-experience-a-shared-space-to-build-community}{Groups product} and enabled group admins to separate group privacy and membership settings; implemented new logic in voyager api and \href{https://engineering.linkedin.com/blog/2017/01/great-tools-for-engineers--refactoring-across-multiple-code-repo}{multiproducts} in Java, and added configurations to settings database
         }
         \resumeItemCustom{
-          Wrote a design document and held discussions with colleagues from different teams
+          Wrote a design document and held discussions on possible solutions with colleagues from different teams
         }
         \resumeItemCustom{
-          Resolved several bugs in Groups product by making changes in multipoducts using Java 
+          Resolved several bugs in Groups product by making changes in multiproducts with Java 
         }
       \resumeItemListEnd
 
@@ -125,22 +129,22 @@
       {Graduate Teaching Assistant}{Jan 2019 -- May 2019}
       \resumeItemListStart
         \resumeItemCustom{
-          Maintained and improved the \href{https://theproject.zone/}{course website} written in Django:
-          added token validation to the frontend using iframe and Vue.js to ensure that
-          students learn the materials sequentially, and kept track of website errors with Sentry
+          Maintained and improved \href{https://theproject.zone/}{course website} written in Django:
+          added token validation to frontend using iframe and Vue.js to ensure 
+          students learning materials sequentially, and kept track of website errors with Sentry
         }
         \resumeItemCustom{
-          Enhanced the \href{https://codereview.theproject.zone/}{code review website} of the course by modifying the React component
-          to collect the scrolling behaviors made by the reviewers for further analysis
+          Enhanced \href{https://codereview.theproject.zone/}{code review website} by modifying the React component
+          to collect scrolling behaviors made by reviewers for further analysis
         }
         \resumeItemCustom{
-          Held office hours to help students debug their code and answer their technical questions
+          Held office hours to help students debug code and answer technical questions
         }
       \resumeItemListEnd
 
     \resumeSubheading
       {Microsoft}{Beijing, China}
-      {Software Engineer Intern}{Summer 2017 and 2018}
+      {Software Engineer Intern}{Jul 2017 -- Oct 2017; May 2018 -- Jul 2018}
       \resumeItemListStart
         \resumeItemCustom{
           Developed several websites: a K-12 education website with React,
@@ -189,32 +193,34 @@
 \section{Projects}
   \resumeSubHeadingListStart
     \resumeSubItem{QryEval}
-      {Search engine for structured queries written in Java, which supports ranking algorithms like
-        Unranked/Ranked Boolean, Indri, and BM25, with integration of pseudo relevance feedback, learning to rank, and diversification.}
+      {Search engine for structured queries written in Java, supporting ranking algorithms include
+        Unranked/Ranked Boolean, Indri, and BM25, with integration of pseudo relevance feedback, learning to rank, and diversification}
     \resumeSubItem{Twitter Analytics Web Service}
       {
-        High-performance, fault-tolerant web service written in Java and Python, built on AWS and Lightsail within a limited budget that ranked first in class final live test, 
-        having HBase and MySQL as back end, whose schemas are highly optimized and data are loaded through ETL on a large dataset.
+        High-performance, fault-tolerant web service written in Java and Python, built on AWS and Lightsail within a limited budget, ranked first in class final live test, 
+        having HBase and MySQL as back end, whose schemas are highly optimized and data are loaded through MapReduce ETL on a large dataset
         %built on AWS instances and managed services like Lightsail. Performed ETL on a large dataset, designed and optimized schema for
         %MySQL and HBase. This service ranked first in terms of throughput and accuracy in the final live test.
       }
     \resumeSubItem{Two-phase Commit}
-      {Distributed system implementing two-phase commit protocol in Java with failure recovery.}
+      {Distributed system implementing two-phase commit protocol in Java with failure recovery}
     \resumeSubItem{CloudFS}
-      {Cloud-backed local file system in C++ with file deduplication, snapshot operations and caching mechanism.}
+      {Cloud-backed local file system in C++ with file deduplication, snapshot operations and caching mechanism}
   \resumeSubHeadingListEnd
 
 \section{Publications}
-  \resumeSubHeadingListStart
-  \item\small{
-    \href{https://ieeexplore.ieee.org/document/8742627}{TongYang, \underline{Siang Gao}, Zhouyi Sun, Yufei Wang, Yulong Shen, Xiaoming Li. Diamond Sketch: Accurate Per-flow Measurement for Big Streaming Data. To appear in TPDS 2019.}
-    \vspace{-4pt}
-  }
-  \item\small{
-    \href{https://ieeexplore.ieee.org/document/8679119}{Zhouyi Sun, \underline{Siang Gao}, Bingqing Liu, Yufei Wang, Tong Yang Bin Cui. Magic Cube Bloom Filter: Answering Membership Queries for Multiple Sets. To appear in Bigcomp 2019.}
-    \vspace{-4pt}
-  }
-  \resumeSubHeadingListEnd
+    \resumeSubHeadingListStart
+    % fake item. just want the indent
+      \item[]
+      \resumeItemListStart
+        \resumeItemCustom{
+            \href{https://ieeexplore.ieee.org/document/8742627}TongYang, \underline{Siang Gao}, Zhouyi Sun, Yufei Wang, Yulong Shen, Xiaoming Li. Diamond Sketch: Accurate Per-flow Measurement for Big Streaming Data. To appear in TPDS 2019.
+        }
+        \resumeItemCustom{
+            \href{https://ieeexplore.ieee.org/document/8679119}Zhouyi Sun, \underline{Siang Gao}, Bingqing Liu, Yufei Wang, Tong Yang Bin Cui. Magic Cube Bloom Filter: Answering Membership Queries for Multiple Sets. To appear in Bigcomp 2019.
+        }
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
 %--------SKILLS------------
 \section{Skills}
